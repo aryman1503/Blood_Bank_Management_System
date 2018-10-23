@@ -1,0 +1,115 @@
+{% extends 'layout.html' %}
+
+
+
+{% block body %}
+<br><br>
+<div class="jumbotron text-left">
+<div class="row">
+<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 templatemo-content-wrapper">
+    <div class="templatemo-content"> 
+
+<section id="templatemo-page8-text" class="active">
+        <div class="col-sm-12 col-md-12">
+            
+            <div class="row">
+                <div class="col-sm-12 col-md-12">
+                                                    <h2 class="text-center"> NGO/Diagnose Center Registration </h2>								
+                </div>
+                <div class="clearfix"></div>
+                <br>
+            </div>					
+                
+            <form role="form" onsubmit="return RegisterFormDonar();"  class="form-horizontal" method="POST" action="form_action.php" name="registerForm"  id="registerForm"  enctype="multipart/form-data">	
+                <div class="col-sm-10 col-md-10">	
+                <div class="col-sm-6 col-md-6">			
+                            <input type="hidden" name="BloodRegisterForm" value="add" />
+                            <input type="hidden" name="Update_id"  value="" />
+                            
+                            <div class="form-group ">
+                                <label class="col-sm-5 control-label">E-Mail Id <span style="color:#d42e2e;">*</span></label>
+                                
+                                    <input onkeyup="TovlidateEmailDonar(this.value);" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"  placeholder="E-Mail Id" value="" class="form-control" required autocomplete="off" ID="txtEmail_reg" name="txtEmail_reg">
+                                </div>
+                                                                        
+                            </div>
+                        
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">Name <span style="color:#d42e2e;">*</span></label>
+                                <div class="col-sm-7"><input type="text" placeholder="Name" value="" class="form-control" required autocomplete="off" ID="txtName" name="txtName" ></div>
+                            </div>
+                             
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">Password <span style="color:#d42e2e;">*</span> </label>
+                                <div class="col-sm-7"><input type="password" placeholder="Password" class="form-control" required autocomplete="off" ID="txtPwd_reg" name="txtPwd_reg" ></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">Confirm Password <span style="color:#d42e2e;">*</span> </label>
+                                <div class="col-sm-7"><input type="password" placeholder="Confirm password" class="form-control" required autocomplete="off" ID="txtConfirm_reg" name="txtConfirm_reg"></div>
+                            </div>
+                                                                    
+                            
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">Country <span style="color:#d42e2e;">*</span> </label>
+                                <div class="col-sm-7">
+                                <select onchange="GetState(this.value,'ddlstState','');" class="form-control" required autocomplete="off" id="ddlCountry"  name="ddlCountry" >
+                                    <option value="">-Select Country-</option>
+                                                                                                
+                                                                    
+                                                                                                <option   value="5">India</option>
+                                                                                                
+                                                                                </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">State <span style="color:#d42e2e;">*</span> </label>
+                                <div class="col-sm-7">
+                                
+                                <select onchange="GetCitys(this.value,'ddlstCity');" class="form-control" required autocomplete="off" ID="ddlstState"  name="ddlstState" >
+                                    <option value="">-Select State-</option>
+                                    <option   value="1">Rajasthan</option>
+                                </select>
+                                
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">City/District  <span style="color:#d42e2e;">*</span> </label>
+                                <div class="col-sm-7">
+                                <select class="form-control" required  autocomplete="off" ID="ddlstCity" name="ddlstCity">
+                                    <option value="">-Select City/District-</option>
+                                    <option   value="1">Jaipur</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">Location </label>
+                                <div class="col-sm-7"><input placeholder="Location" type="text" value=""  class="form-control"  autocomplete="off" ID="txtLocation" name="txtLocation"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">Pin code </label>
+                                <div class="col-sm-7"><input type="text" value=""   placeholder="PIN"  class="form-control"  autocomplete="off" ID="txtPin" name="txtPin"></div>
+                            </div>
+                                
+                                                
+                    
+                </div>							
+                
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">Date of Establish <span style="color:#d42e2e;">*</span></label>
+                                <div class="freebirdFormviewerViewItemsItemItemTitle exportItemTitle freebirdCustomFont" dir="auto" role="heading" aria-level="2" aria-describedby="i.desc.1286315708 i62"> <span class="freebirdFormviewerViewItemsItemRequiredAsterisk" aria-label="Required question"></span></div><div class="freebirdFormviewerViewItemsItemItemHelpText" id="i.desc.1286315708" dir="auto"></div></div></div><div class="freebirdFormviewerViewItemsDateDateInput"><div class="freebirdFormviewerViewItemsDateDateInputs" jsname="q7Lpsb" aria-label="Date of Birth" data-includeyear="true" data-supportsdate="true"><div class="freebirdFormviewerViewItemsDateLabel"></div><div class="quantumWizTextinputPaperinputEl freebirdThemedInput freebirdFormviewerViewItemsDateDateInput modeLight" jscontroller="pxq3x" jsaction="clickonly:KjsqPd; focus:Jt1EX; blur:fpfTEe; input:Lg5SV;" jsshadow jsname="jPalo"><div class="quantumWizTextinputPaperinputMainContent exportContent"><div class="quantumWizTextinputPaperinputContentArea exportContentArea"><div class="quantumWizTextinputPaperinputInputArea"><input type="date" class="quantumWizTextinputPaperinputInput exportInput" jsname="YPqjbf" autocomplete="off" tabindex="0" value=""  data-initial-value=""/></div>
+
+                                <!--<div class="col-sm-7"><input type="text" value=""  placeholder="Date of Last Donated" style="cursor:pointer;" readonly class="form-control datepicker"  autocomplete="off" name="Donated_date" id="Donated_date" ></div>-->
+                            </div>	
+                            <div class="form-group">
+                                <label class="col-sm-5 control-label">Phone Number <span style="color:#d42e2e;">*</span></label>
+                                <div class="col-sm-7"><input type="text" value=""   maxlength="10"  placeholder="Phone : Mobile" required  class="form-control"  autocomplete="off" ID="txtMob" name="txtMob"></div>
+                            </div>
+                            <p class="lead text-center"> 
+                                <a class="btn btn-primary btn-lg" href="/wng" role="button">Submit</a>
+                              </p>
+                            </div>
+{% endblock %}

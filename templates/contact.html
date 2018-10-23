@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+
+
+
+{% block body %}
+<marquee behavior="scroll" direction="left" scrollamount="4"><h style="color:red;">Warning: </h>Do not pay any amount to any person promising supply of blood packets or arranging donors. Inform us at aryman.git@gmail.com or call our nearest team members. so that we can initiate police/legal action. We have received complaints of middlemen seeking money - <h style="color:crimson;">मदत</h> has no agents, does not arrange blood/donors and does not collect money for any service.</marquee>
+<div class="jumbotron text-left">              
+<!--<form id="contact-form" method="post" action="home.html" role="form">
+-->
+<form>
+    <div class="messages"></div>
+
+    <div class="controls">
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_name">First Name *</label>
+                    <input id="form_name" type="text" name="name" class="form-control" placeholder="Please enter your firstname *" required="required" data-error="Firstname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_lastname">Last Name *</label>
+                    <input id="form_lastname" type="text" name="surname" class="form-control" placeholder="Please enter your lastname *" required="required" data-error="Lastname is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_email">Email *</label>
+                    <input id="form_email" type="email" name="email" class="form-control" placeholder="Please enter your email *" required="required" data-error="Valid email is required.">
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="form_need">Please specify your need *</label>
+                    <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
+                        <option value=""></option>
+                        <option value="Request quotation">Request Blood</option>
+                        <option value="Request order status">Instant Blood</option>
+                        <option value="Request copy of an invoice">Finding the Diagnose center</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="form_message">Message *</label>
+                    <textarea id="form_message" name="message" class="form-control" placeholder="Message for me *" rows="4" required="required" data-error="Please, leave us a message."></textarea>
+                    <div class="help-block with-errors"></div>
+                </div>
+            </div>
+            <div class="col-md-12">
+                    <a class="btn btn-danger btn-lg" href="/sendmsg" role="button">Send message</a>
+              <!--  <input type="submit" class="btn btn-success btn-send"  value="Send message">-->
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p class="text-muted">
+                    <strong>*</strong> These fields are required.</div>
+        </div>
+    </div>
+
+</form>
+</div>
+<!-- Footer -->
+<footer class="page-footer font-small blue-grey lighten-5">
+
+
+    <!-- Footer Links -->
+    <div class="container text-center text-md-left mt-5">
+
+      <!-- Grid row -->
+      <div class="row mt-3 dark-grey-text">
+
+        <!-- Grid column -->
+        <div class="col-md-5 col-lg-4 col-xl-3 mb-4">
+
+          <!-- Content -->
+          <h6 class="text-uppercase font-weight-bold">Address</h6>
+          <hr class="teal accent-3 mb-4 mt-0 d-inline-block mx-auto" style="width: 0px;">
+          <p><h style="color:blue;">GLOBAL INSTITUTE OF TECHNOLOGY</h><br>ITS 1 & 2, IT Park Rd, EPIP, Sitapura, Jaipur, Rajasthan 302022</p>
+
+        </div>
+       
+
+        
+        <!-- Grid column -->
+        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+          <!-- Links -->
+          <h6 class="text-uppercase font-weight-bold">Contact</h6>
+          <hr class="teal accent-3 mb-6 mt-0 d-inline-block mx-auto" style="width: 60px;">
+          <p>
+            <i class="fa fa-envelope mr-3"></i> aryman.git@gmail.com</p>
+          <p>
+            <i class="fa fa-phone mr-3"></i> + 91-7062876563</p>
+        </div>
+        <!-- Grid column -->
+
+      </div>
+      <!-- Grid row -->
+
+    </div>
+    <!-- Footer Links -->
+
+  </footer>
+  <!-- Footer -->
+{% endblock %}

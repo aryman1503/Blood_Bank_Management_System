@@ -1,0 +1,68 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<div class="jumbotron">
+    <h1 class="text-center">Request Blood</h1>
+    <td width="129" height="30" class="contactheading">Blood Group</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td width="302"><select name="dpBloodGroup" id="dpBloodGroup" class="findbloodlistmenu">
+	<option value="Select">-----Select-----</option>
+	<option value="A+">A+</option>
+	<option value="A-">A-</option>
+	<option value="A1+">A1+</option>
+	<option value="A1-">A1-</option>
+	<option value="A1B+">A1B+</option>
+	<option value="A1B-">A1B-</option>
+	<option value="A2+">A2+</option>
+	<option value="A2-">A2-</option>
+	<option value="A2B+">A2B+</option>
+	<option value="A2B-">A2B-</option>
+	<option value="AB+">AB+</option>
+	<option value="AB-">AB-</option>
+	<option value="B+">B+</option>
+	<option value="B-">B-</option>
+	<option value="O+">O+</option>
+	<option value="O-">O-</option>
+</select></td>
+</tr><br><br>
+<tr>
+<td height="30" class="contactheading" width="129">Select Country</td>&nbsp;&nbsp;&nbsp;&nbsp;
+<td class="style3"><select name="dpCountry" id="dpCountry" class="findbloodlistmenu" onChange="javascript:WebForm_DoCallback(&#39;__Page&#39;,document.getElementById(&#39;dpCountry&#39;).options[document.getElementById(&#39;dpCountry&#39;).selectedIndex].value,ParentcategoryContent,null,null,false)">
+	<option value="Select">Country</option>
+	<option value="1|dpCountry">INDIA</option>
+
+</select></td>
+</tr>
+<tr><br><br>
+<td height="35" class="contactheading">Select State</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td><select name="dpState" id="dpState" class="findbloodlistmenu" onchange="javascript:WebForm_DoCallback(&#39;__Page&#39;,document.getElementById(&#39;dpState&#39;).options[document.getElementById(&#39;dpState&#39;).selectedIndex].value,categoryContent,null,null,false)">
+  <option value="Select">State</option>
+  <option value="1|dpState">RAJASTHAN</option>
+  
+
+</select></td>
+</tr>
+<tr><br><br>
+<td class="style4">Select District</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td class="style3"><select name="dpDistrict" id="dpDistrict" class="findbloodlistmenu">
+	<option value="Select">District</option>
+	<option value="1|dpDistrict">JAIPUR</option>
+
+</select></td>
+</tr>
+<tr><br><br>
+<td>Select City</td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<td><select name="dpCity" id="dpCity" class="findbloodlistmenu">
+	<option value="Select">City</option>
+	<option value="1|dpCity">MANSAROVER</option>
+	<option value="2|dpCity">SITAPURA</option>
+	<option value="3|dpCity">VAISHALI NAGAR</option>
+
+</select></td>
+</tr><br>
+<p class="lead text-center"> 
+	<a class="btn btn-primary btn-lg" href="/wng" role="button">Submit</a>
+  </p>
+</div> 
+
+</div>
+{% endblock %}
